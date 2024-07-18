@@ -1,0 +1,115 @@
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+
+    .search-input {
+        width: 300px;
+        margin-right: 15px;
+
+        input {
+            padding-right: 40px;
+        }
+
+        @media screen and (max-width: 500px) {
+            width: 100%;
+            margin-right: 0;
+        }
+    }
+}
+
+.task-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    min-height: 37vh;
+    padding: 20px;
+
+    .task-card {
+        width: calc(33.33% - 20px);
+        margin-bottom: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        background-color: white;
+
+        @media screen and (max-width: 1200px) {
+            width: calc(50% - 20px);
+        }
+
+        @media screen and (max-width: 768px) {
+            width: calc(100% - 20px);
+        }
+
+        .task-details {
+            padding: 20px;
+
+            .task-name {
+                font-size: 20px;
+                font-weight: bold;
+                color: #10bee9;
+                margin-bottom: 10px;
+
+                @media screen and (max-width: 500px) {
+                    font-size: 18px;
+                }
+            }
+
+            .task-description {
+                margin-bottom: 10px;
+            }
+
+            .task-info {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+                margin-top: 10px;
+
+                .info-row {
+                    flex: 0 0 50%;
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 8px;
+
+                    .info-label {
+                        font-weight: 600;
+                        margin-right: 5px;
+                    }
+
+                    .info-value {
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            .actions {
+                display: flex;
+                justify-content: flex-end;
+                margin-top: 10px;
+
+                .update-button {
+                    margin-right: 10px;
+                }
+
+                .view-button {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.export-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    background-color: #3f51b5;
+    color: white;
+
+    @media screen and (max-width: 500px) {
+        bottom: 10px;
+        right: 10px;
+    }
+}

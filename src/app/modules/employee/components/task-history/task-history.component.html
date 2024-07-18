@@ -1,0 +1,8 @@
+<h5>Task History</h5>
+<mat-list>
+  <mat-list-item *ngFor="let history of taskHistory">
+    <hr>
+    <h6 mat-line>{{ history.action }}</h6>
+    <p mat-line>{{ history.timestamp | date: 'medium' }}</p>
+  </mat-list-item>
+</mat-list>
